@@ -1,0 +1,4 @@
+.appbar{
+    position: absolute;
+    z-index: 999999;
+}

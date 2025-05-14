@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="navbar-logo"></div>
+
+  <ul class="navbar-links">
+    <li><a routerLink="/buscador">CATÁLOGO</a></li>
+    <li><a routerLink="/quienes-somos">QUIENES SOMOS?</a></li>
+    <li><a routerLink="/servicios">NUESTROS SERVICIOS</a></li>
+    <li><a routerLink="/contacto">CONTACTO</a></li>
+
+    <ng-container *ngIf="!isLoggedIn(); else loggedInBlock">
+      <li><a routerLink="/login">LOG IN</a></li>
+    </ng-container>
+
+    <ng-template #loggedInBlock>
+      <li><span>Bienvenido, <strong>{{ usuario }}</strong></span></li>
+      <li><a href="#" (click)="logout()">CERRAR SESIÓN</a></li>
+    </ng-template>
+  </ul>
+
+  <!-- Línea dinámica -->
+  <div class="navbar-line" [style.width.%]="lineWidth"></div>
+</nav>

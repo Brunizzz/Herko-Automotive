@@ -1,0 +1,66 @@
+.footer {
+    background-color: white;
+    color: #008b99;
+    padding: 10px 20px; /* Reducir el padding */
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #008b99;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0; /* Reducir el padding */
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 10px; /* Reducir el margen */
+  }
+  
+  .footer-section h3 {
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    margin-bottom: 10px; /* Reducir el margen inferior */
+    color: #005f6b;
+  }
+  
+  .footer-section p {
+    margin: 3px 0; /* Reducir el margen */
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 8px; /* Reducir el espacio entre iconos */
+  }
+  
+  .social-icons a {
+    color: #008b99; /* Color de los iconos */
+    font-size: 18px; /* Tamaño de los iconos */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #005f6b; /* Cambiar color al hacer hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px; /* Reducir el padding */
+    border-top: 1px solid #ddd;
+    font-size: 10px; /* Reducir el tamaño de la fuente */
+  }
+  
+  .footer-bottom p {
+    margin: 3px 0; /* Reducir el margen */
+  }
+  
+  .footer-bottom a {
+    color: #008b99;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }

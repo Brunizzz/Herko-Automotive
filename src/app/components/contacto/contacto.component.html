@@ -1,0 +1,46 @@
+<body>
+  <div class="contacto-container">
+    <header class="contacto-header">
+      <h1>Contacto</h1>
+    </header>
+    <section class="contacto-body">
+      <!-- FORMULARIO DE CONTACTO -->
+      <!-- FORMULARIO DE CONTACTO -->
+      <form (ngSubmit)="guardarFormulario()" #formContacto="ngForm" class="contacto-form">
+        <div class="form-nombre-apellido">
+          <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Nombre" required />
+          <input type="text" name="apellido" [(ngModel)]="apellido" placeholder="Apellido" required />
+        </div>
+        <div class="form-correo">
+          <input type="email" name="correo" [(ngModel)]="correo" placeholder="Correo electrónico" required />
+        </div>
+        <div class="form-descripcion">
+          <textarea name="descripcion" [(ngModel)]="descripcion" placeholder="Descripción" rows="4" required></textarea>
+        </div>
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+
+    <section class="contacto-body">
+      <div class="contacto-info">
+        <div class="info-item">
+          <p>CORREO</p>
+          <p>ventas&#64;herko.com.mx</p>
+        </div>
+        <div class="info-item">
+          <p>TELÉFONO</p>
+          <p>(55) 5999 1599</p>
+        </div>
+        <div class="info-item">
+          <p>DIRECCIÓN</p>
+          <p>
+            Margarita Maza de Juárez No. 191<br />
+            Col. Nueva Industrial Vallejo<br />
+            Del. Gustavo A. Madero, C.P. 07700 CDMX.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+</body>

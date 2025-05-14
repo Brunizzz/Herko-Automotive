@@ -1,0 +1,46 @@
+<div class="registro-container">
+  <div class="contacto-container">
+    <div class="contacto-header">
+      <h1>Registros de Usuarios</h1>
+    </div>
+
+    <div class="contacto-body">
+      <table class="registro-tabla">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let r of registros; let i = index">
+            <ng-container *ngIf="editIndex !== i; else editMode">
+              <td>{{ r.nombre }}</td>
+              <td>{{ r.apellido }}</td>
+              <td>{{ r.correo }}</td>
+              <td>{{ r.descripcion }}</td>
+              <td>
+                <button class="btn editar" (click)="editar(i)">Editar</button>
+                <button class="btn eliminar" (click)="eliminar(i)">Eliminar</button>
+              </td>
+            </ng-container>
+
+            <ng-template #editMode>
+              <td><input [(ngModel)]="edited.nombre" /></td>
+              <td><input [(ngModel)]="edited.apellido" /></td>
+              <td><input [(ngModel)]="edited.correo" /></td>
+              <td><textarea [(ngModel)]="edited.descripcion"></textarea></td>
+              <td>
+                <button class="btn guardar" (click)="guardarEdicion()">Guardar</button>
+                <button class="btn cancelar" (click)="cancelarEdicion()">Cancelar</button>
+              </td>
+            </ng-template>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,271 @@
+/* Estilos generales */
+body {
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo de imagen fija */
+.image-container {
+  position: relative;
+  height: 100vh;
+  background: url('../../../assets/fondoini.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.welcome-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 20px; /* 🔹 Aumenta el tamaño del texto */
+  font-weight: bold; /* 🔹 Lo hace más grueso */
+  font-family: 'Poppins', sans-serif; /* 🔹 Fuente moderna y elegante */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* 🔹 Agrega sombra para mejorar la visibilidad */
+  letter-spacing: 1.5px; /* 🔹 Espaciado entre letras */
+}
+
+.catalogo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Marco negro para los elementos internos */
+.marco-negro {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Buscador centrado con diseño limpio */
+.buscador-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* Título del buscador */
+.titulo-buscador {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+  padding-bottom: 15px;
+  padding-top: 20px;
+}
+
+/* Filtros alineados correctamente */
+.buscador-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Estilos de los filtros (manteniendo la forma original) */
+.buscador-filtros select {
+  width: 210px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f1f1f1;
+  color: black;
+  text-align: center;
+}
+
+/* Contenedor de la barra de búsqueda */
+
+
+/* Estilos del input de búsqueda */
+.buscador input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%; /* Ajusta según lo que necesites */
+  max-width: 1400px; /* Más ancho */
+}
+@media (min-width: 1400px) {
+  .buscador {
+    max-width: 1600px;
+  }
+}
+
+/* Botón de búsqueda similar al diseño de la imagen */
+.btn-buscar {
+  padding: 10px 15px;
+  background: transparent;
+  color: blue;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none; /* 🔹 Quita el subrayado */
+}
+
+.btn-buscar:hover {
+  color: darkblue;
+}
+
+/* Contenedor principal de productos */
+.productos-container {
+  padding: 20px;
+}
+
+/* Grid para las tarjetas de productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Estilo de cada tarjeta de producto */
+.producto-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo de la imagen del producto */
+.producto-imagen {
+  width: 100%;
+  height: 200px; /* Ajusta el tamaño de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+}
+
+/* Estilo de los detalles del producto */
+.producto-detalles {
+  padding: 15px;
+  text-align: center;
+}
+
+.producto-detalles h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.producto-detalles p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Estilo del botón "Ver aplicaciones" */
+/* Estilo del botón "Ver aplicaciones" */
+.ver-aplicaciones {
+  background-color: #008b99; /* Color base */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Un poco más de padding para mejor apariencia */
+  border-radius: 8px; /* Bordes más redondeados */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500; /* Texto un poco más grueso */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  transition: all 0.3s ease; /* Transición suave para todos los efectos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover */
+.ver-aplicaciones:hover {
+  background-color: #006f7a; /* Color más oscuro al pasar el mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  transform: translateY(-2px); /* Efecto de levantar el botón */
+}
+
+/* Efecto de brillo al pasar el mouse */
+.ver-aplicaciones::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.ver-aplicaciones:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efecto de borde animado */
+.ver-aplicaciones::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ver-aplicaciones:hover::after {
+  opacity: 1;
+}
+
+/* Efecto de pulsación al hacer clic */
+.ver-aplicaciones:active {
+  transform: translateY(0); /* Vuelve a su posición original */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+}
+/* Animaciones */
+
+/* Animaciones */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

@@ -1,0 +1,14 @@
+.login-container {
+    max-width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+.error {
+    color: red;
+}

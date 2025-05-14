@@ -1,0 +1,107 @@
+.servicios-container {
+  background-color: #ffffff;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.servicios-titulo {
+  color: #008b99;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-card {
+  background-color: #fffcfc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.servicios-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.servicios-imagen {
+  width: 500px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-mecanica {
+  background-image: url('../../../assets/mecanica.jpg');
+}
+
+.imagen-venta {
+  background-image: url('../../../assets/venta_autos.jpg');
+}
+
+.imagen-financiamiento {
+  background-image: url('../../../assets/financiamiento.jpg');
+}
+
+.servicios-detalles {
+  text-align: left;
+  max-width: 900px;
+}
+
+.servicios-nombre {
+  font-size: 24px;
+  font-weight: bold;
+  color: #008b99;
+  margin-bottom: 15px;
+}
+
+.servicios-descripcion {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #141414;
+}
+
+.servicios-video {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

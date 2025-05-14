@@ -1,0 +1,118 @@
+.quienes-container {
+  background-color: #ffffff;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.quienes-titulo {
+  color: #008b99;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quienes-card {
+  background-color: #fffcfc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.quienes-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.quienes-imagen {
+  width: 500px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-agencia {
+  background-image: url('../../../assets/fondo_notas.jpg'); /* Cambia la imagen según tu ruta */
+}
+
+.imagen-valores {
+  background-image: url('../../../assets/valores.jpg'); /* Usa tu propia imagen */
+}
+
+.imagen-experiencia {
+  background-image: url('../../../assets/experiencia.jpg'); /* Usa tu propia imagen */
+}
+
+.imagen-profesional {
+  background-image: url('../../../assets/profesional.jpg'); /* Usa tu propia imagen */
+}
+
+.imagen-ambiental {
+  background-image: url('../../../assets/ambiental.jpg'); /* Usa tu propia imagen */
+}
+
+
+.quienes-detalles {
+  text-align: left;
+  max-width: 900px;
+}
+
+.quienes-nombre {
+  font-size: 24px;
+  font-weight: bold;
+  color: #008b99;
+  margin-bottom: 15px;
+}
+
+.quienes-descripcion {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #141414;
+}
+
+.quienes-botones {
+  margin-top: 20px;
+}
+
+.btn-contacto {
+  background-color: #008b99;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #006f7a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

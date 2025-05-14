@@ -1,0 +1,106 @@
+<div class="image-container">
+    <div class="welcome-overlay">
+      <h1 class="animate-on-scroll" [@fadeIn]>Bienvenido</h1>
+      <p class="animate-on-scroll" [@fadeIn]>Tu auto ideal, con las facilidades que mereces</p>
+      <p class="animate-on-scroll" [@fadeIn]>Explora nuestra colección de automoviles</p>
+    </div>
+</div>
+
+<div class="container mt-4">
+  <h1 class="text-center mb-4">Catálogo de Autos</h1>
+  
+  <!-- Filtros -->
+  <div class="row mb-4 animate-on-scroll">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Filtros de Búsqueda</h5>
+          
+          <!-- Búsqueda general -->
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Buscar por nombre, modelo o parte..." 
+                   [(ngModel)]="searchTerm" (input)="buscarProductosGeneral()">
+          </div>
+          
+          <div class="row">
+            <!-- Filtro por marca -->
+            <div class="col-md-3 mb-3">
+              <label class="form-label">Marca</label>
+              <select (change)="onMarcaChange($event)" class="form-select">
+                <option value="">Seleccione Marca</option>
+                <option *ngFor="let marca of marcas" [value]="marca.id">
+                  {{ marca.nombre }}
+                </option>
+              </select>
+            </div>
+            
+            <!-- Filtro por modelo -->
+            <div class="col-md-3 mb-3">
+              <label class="form-label">Modelo</label>
+              <select (change)="onModeloChange($event)" class="form-select" [disabled]="!modelos.length">
+                <option value="">Seleccione Modelo</option>
+                <option *ngFor="let modelo of modelos" [value]="modelo.id_modelo">
+                  {{ modelo.nombre }}
+                </option>
+              </select>
+            </div>
+            
+            <!-- Filtro por año -->
+            <div class="col-md-3 mb-3">
+              <label class="form-label">Año</label>
+              <select (change)="onAnoChange($event)" class="form-select" [disabled]="!anos.length">
+                <option value="">Seleccione Año</option>
+                <option *ngFor="let ano of anos" [value]="ano.ano">
+                  {{ ano.ano }}
+                </option>
+              </select>
+            </div>
+            
+            <!-- Filtro por kilometraje -->
+            <div class="col-md-3 mb-3">
+              <label class="form-label">Kilometraje</label>
+              <select (change)="onKilometrajeChange($event)" class="form-select" [disabled]="!kilometrajes.length">
+                <option value="">Seleccione Kilometraje</option>
+                <option *ngFor="let km of kilometrajes" [value]="km.km">
+                  {{ km.km | number }} km
+                </option>
+              </select>
+            </div>
+          </div>
+          
+          <button (click)="resetFilters()" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-counterclockwise"></i> Limpiar Filtros
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Resultados -->
+  <div *ngIf="productos.length > 0" class="row animate-on-scroll">
+    <div *ngFor="let producto of productos" class="col-md-4 mb-4" @fadeIn>
+      <div class="card h-100">
+        <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">
+            <strong>Parte:</strong> {{ producto.parte }}<br>
+            <strong>Año:</strong> {{ producto.ano }}<br>
+            <strong>Kilometraje:</strong> {{ producto.km | number }} km
+          </p>
+        </div>
+        <div class="card-footer">
+          <button (click)="verDetalles(producto)" class="btn btn-primary">
+            Ver Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mensaje cuando no hay resultados -->
+  <div *ngIf="productos.length === 0" class="alert alert-info animate-on-scroll">
+    No se encontraron vehículos con los criterios seleccionados.
+    <button (click)="resetFilters()" class="btn btn-link">Mostrar todos los vehículos</button>
+  </div>
+</div>
